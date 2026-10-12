@@ -1,0 +1,4 @@
+# Dev overlay: pnpm dsh web --patch C:/Users/Admin/.zcode/workspace/default/dsh-janitor/cordis.dev.patch.yml
+- insert:
+    - id: dsh-janitor
+      name: 'C:/Users/Admin/.zcode/workspace/default/dsh-janitor/src/index.ts'

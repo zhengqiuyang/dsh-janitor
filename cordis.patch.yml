@@ -1,0 +1,4 @@
+# Applied when a profile lists this bundle.
+- insert:
+    - id: dsh-janitor
+      name: dsh-janitor

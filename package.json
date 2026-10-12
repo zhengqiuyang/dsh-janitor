@@ -1,0 +1,50 @@
+{
+  "name": "dsh-janitor",
+  "version": "0.1.0",
+  "description": "Deterministic artifact lifecycle for DeepSeek Harness: scans plan docs and scratch scripts left behind by agent sessions, returns a reviewable cleanup plan — the janitor is never an agent",
+  "type": "module",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build",
+    "sync": "node scripts/sync-aj-core.mjs",
+    "test": "npm run sync && npm run build && node test/run-tests.mjs"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "ai-agents",
+    "cleanup",
+    "deterministic"
+  ],
+  "dependencies": {
+    "yaml": "^2.6.1"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.0",
+    "@deepseek-ai/dsh-tools": ">=0.1.2-alpha.2",
+    "@deepseek-ai/schemastery": "^3.18.0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.0.0",
+    "@deepseek-ai/dsh-tools": "^0.1.2-alpha.2",
+    "@deepseek-ai/schemastery": "^3.18.0",
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
