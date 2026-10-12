@@ -41,16 +41,12 @@ apply as a three-step, non-agent pipeline is unowned.
 ## Install
 
 ```sh
-dsh plugin --profile default add github:zhengqiuyang/dsh-janitor
+dsh plugin --profile default add dsh-janitor
 ```
 
-git installs build from source; authorize once in the profile's
-`pnpm-workspace.yaml`:
+From npm — no build step, no `allowBuilds` authorization; git installs are equally prebuilt (`lib/` ships in the repo).
 
-```yaml
-allowBuilds:
-  dsh-janitor: true
-```
+
 
 ## Configure
 
