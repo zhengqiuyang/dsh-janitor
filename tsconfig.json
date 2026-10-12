@@ -7,9 +7,9 @@
     "outDir": "lib",
     "rootDir": "src",
     "strict": true,
-    "declaration": true,
+    "declaration": false,
     "skipLibCheck": true,
-    "sourceMap": true
+    "sourceMap": false
   },
   "include": ["src"]
 }

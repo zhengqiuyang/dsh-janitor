@@ -18,9 +18,9 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "prepare": "npm run build",
     "sync": "node scripts/sync-aj-core.mjs",
-    "test": "npm run sync && npm run build && node test/run-tests.mjs"
+    "test": "npm run sync && npm run build && node test/run-tests.mjs",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "dsh-plugin",
