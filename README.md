@@ -58,6 +58,12 @@ From npm — no build step, no `allowBuilds` authorization; git installs are equ
     protectedPaths: ["plans", "docs/decisions"]   # exact file or directory prefix
 ```
 
+## Compatibility
+
+- **DSH**: verified against the 0.2.x line (source snapshot 0.2.1-alpha.2); installs on any profile via `dsh plugin add` (prebuilt `lib/`, no build approval).
+- **Node**: >= 20 (CI matrix: Node 20/22/24 on Ubuntu and Windows).
+- **Disposable-profile evidence (2026-10-19)**: `dsh plugin --profile <fresh> add github:zhengqiuyang/dsh-janitor` → installed in 30s; boot shows `[dsh-janitor] active: …`; `dsh plugin --profile <fresh> remove dsh-janitor` → dependencies cleared, bundles restored.
+
 ## Develop
 
 ```sh
