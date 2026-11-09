@@ -51,6 +51,11 @@ async function main() {
   for (const file of FILES) {
     const src = join(sourceRoot, file);
     if (!existsSync(src)) {
+      const vendored = join(vendorRoot, file);
+      if (existsSync(vendored)) {
+        console.warn(`sync-aj-core: no sibling checkout for ${file}; using the committed copy`);
+        continue;
+      }
       console.error(`sync-aj-core: missing source ${src}`);
       console.error('Is the agent-janitor checkout a sibling of this plugin?');
       process.exit(1);
