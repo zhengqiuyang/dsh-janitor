@@ -19,4 +19,9 @@ jobs:
           node-version: 24
           registry-url: https://registry.npmjs.org/
       - run: npm install --no-fund --no-audit
-      - run: npm publish --access public
+      - run: npm test
+      - name: Tag matches package.json
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          test "v$VERSION" = "$GITHUB_REF_NAME" || { echo "tag $GITHUB_REF_NAME does not match v$VERSION"; exit 1; }
+      - run: npm publish --access public --provenance

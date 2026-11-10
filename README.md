@@ -1,5 +1,11 @@
 # dsh-janitor
 
+[![CI](https://github.com/zhengqiuyang/dsh-janitor/actions/workflows/ci.yml/badge.svg)](https://github.com/zhengqiuyang/dsh-janitor/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/dsh-janitor)](https://www.npmjs.com/package/dsh-janitor)
+[![license](https://img.shields.io/npm/l/dsh-janitor)](https://github.com/zhengqiuyang/dsh-janitor/blob/main/LICENSE)
+
+> Part of the [DSH trust layer](https://github.com/zhengqiuyang/dsh-trust-panel/blob/main/SUITE.md) — ten deterministic checks, no LLM in the trust path.
+
 > **If this helps you, please give it a star** — it helps others find it. Thanks!
 
 Deterministic artifact lifecycle for
