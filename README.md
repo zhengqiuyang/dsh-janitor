@@ -1,12 +1,22 @@
+<div align="center">
+
 # dsh-janitor
+
+**Artifact lifecycle — scans session debris, returns a reviewable cleanup plan; the janitor is never an agent**
 
 [![CI](https://github.com/zhengqiuyang/dsh-janitor/actions/workflows/ci.yml/badge.svg)](https://github.com/zhengqiuyang/dsh-janitor/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/dsh-janitor)](https://www.npmjs.com/package/dsh-janitor)
 [![license](https://img.shields.io/npm/l/dsh-janitor)](https://github.com/zhengqiuyang/dsh-janitor/blob/main/LICENSE)
 
-> Part of the [DSH trust layer](https://github.com/zhengqiuyang/dsh-trust-panel/blob/main/SUITE.md) — ten deterministic checks, no LLM in the trust path.
+```sh
+dsh plugin --profile default add dsh-janitor
+```
 
-> **If this helps you, please give it a star** — it helps others find it. Thanks!
+**If this helps you, please give it a star** — it helps others find it.
+
+</div>
+
+> Part of the [DSH trust layer](https://github.com/zhengqiuyang/dsh-trust-panel/blob/main/SUITE.md) — ten deterministic checks, no LLM in the trust path.
 
 Deterministic artifact lifecycle for
 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (dsh).
